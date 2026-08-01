@@ -16,6 +16,7 @@ Lab/assignment implementations are kept out of this repo — see each course's R
 - [CMU 15-445/645 — Intro to Database Systems](cmu-15445/README.md)
 - [CMU 15-721 — Advanced Database Systems](cmu-15721/README.md)
 - [Stanford CS231n — Deep Learning for Computer Vision](stanford-cs231n/README.md)
+- [Stanford CS336 — Language Modeling from Scratch](stanford-cs336/README.md)
 - [Stanford CS143 — Compilers](stanford-cs143/README.md)
 - [Stanford CS221 — Artificial Intelligence: Principles and Techniques](stanford-cs221/README.md)
 - [Stanford CS229 — Machine Learning](stanford-cs229/README.md)
