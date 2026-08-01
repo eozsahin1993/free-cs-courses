@@ -70,9 +70,12 @@ a separate private repo, matching the policy used for the other courses here.
 
 CS221's homeworks are graded entirely through Gradescope, and Gradescope enrollment is automatic
 via a `@stanford.edu` email — the homework page has no public entry code or alternative path for
-outside learners, unlike CMU 15-445's open Gradescope section. That said, each homework zip (e.g.
-`hw1_foundations.zip`) ships its own `grader.py` with public test cases you can run locally
-(`python grader.py`) to self-check the programming portion; only the hidden Gradescope tests and
-the written-problem grading are unavailable. The two written exams (60% of the real course grade)
-are proctored and enrollment-only with no self-study equivalent — a self-studier's checkpoint is
-the eight homeworks' local test cases, not the exams.
+outside learners, unlike CMU 15-445's open Gradescope section. Local self-checking varies by
+homework rather than being a uniform `grader.py`: some (e.g. HW5 Pac-Man) ship a `grader.py` you
+can run locally, though its own docs note it only catches crashes/basic bugs, not timeouts; others
+(e.g. HW6 Course Scheduling) ship standalone sanity-check scripts (`run_p2.py`, `run_p3.py`) with
+expected outputs to compare against rather than a pass/fail suite; a few (e.g. HW1 Foundations)
+mention no local script at all and are Gradescope-only. Check each homework's own page for what it
+ships. The two written exams (60% of the real course grade) are proctored and enrollment-only with
+no self-study equivalent — a self-studier's checkpoint is whatever each homework's local scripts
+let you verify, not the exams.

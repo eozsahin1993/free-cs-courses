@@ -12,6 +12,8 @@
 
 ## Assigned
 - [ ] HW6 Course Scheduling (assigned) — https://stanford-cs221.github.io/spring2026/assignments/hw6_scheduling/index.html
+      (local check: `run_p2.py` n-queens sanity check, `run_p3.py` scheduling smoke test against a
+      profile file — expected-output scripts, not a pass/fail grader; real grading is Gradescope-only)
 
 ## Due
 - [ ] HW5 Pac-Man — https://stanford-cs221.github.io/spring2026/assignments/hw5_pacman/index.html
