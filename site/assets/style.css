@@ -1,0 +1,123 @@
+:root {
+  color-scheme: light dark;
+  --bg: #ffffff;
+  --fg: #1a1a1a;
+  --muted: #666;
+  --border: #e2e2e2;
+  --accent: #2563eb;
+  --code-bg: #f4f4f5;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #16181d;
+    --fg: #e6e6e6;
+    --muted: #9a9a9a;
+    --border: #2c2f36;
+    --accent: #6ea8fe;
+    --code-bg: #1f2229;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+header.site-header {
+  border-bottom: 1px solid var(--border);
+  padding: 0.9rem 1.5rem;
+}
+
+header.site-header a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+header.site-header a:hover { color: var(--accent); }
+
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+h1, h2, h3 { line-height: 1.25; }
+h1 { font-size: 1.7rem; margin-bottom: 0.3rem; }
+h2 { font-size: 1.2rem; margin-top: 2.2rem; border-top: 1px solid var(--border); padding-top: 1.2rem; }
+h3 { font-size: 1.02rem; margin-bottom: 0.4rem; }
+
+a { color: var(--accent); }
+
+table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: 0.92rem; }
+th, td { border: 1px solid var(--border); padding: 0.45rem 0.6rem; text-align: left; vertical-align: top; }
+th { background: var(--code-bg); }
+
+code { background: var(--code-bg); padding: 0.1em 0.35em; border-radius: 4px; font-size: 0.88em; }
+pre code { display: block; padding: 0.8rem; overflow-x: auto; }
+
+ul, ol { padding-left: 1.3rem; }
+li { margin: 0.2rem 0; }
+
+li:has(> input[type="checkbox"]) { list-style: none; margin-left: -1.3rem; }
+input[type="checkbox"] { margin-right: 0.4rem; transform: translateY(1px); }
+
+/* progress bars */
+.progress-section { margin-top: 2.5rem; }
+.progress-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.35rem 0;
+}
+.progress-row .label { flex: 0 0 auto; min-width: 9rem; }
+.progress-row .label a { color: var(--fg); text-decoration: none; font-weight: 500; }
+.progress-row .label a:hover { color: var(--accent); }
+.progress-placeholder { flex: 1; display: flex; align-items: center; gap: 0.6rem; }
+
+.bar {
+  flex: 1;
+  height: 8px;
+  background: var(--code-bg);
+  border-radius: 4px;
+  overflow: hidden;
+  min-width: 4rem;
+}
+.bar .fill {
+  height: 100%;
+  background: var(--accent);
+  transition: width 0.2s ease;
+}
+.pct { font-size: 0.82rem; color: var(--muted); white-space: nowrap; min-width: 3.2rem; text-align: right; }
+
+.is-hidden { display: none; }
+
+.enroll-btn {
+  flex: 0 0 auto;
+  font: inherit;
+  font-size: 0.82rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--code-bg);
+  color: var(--fg);
+  cursor: pointer;
+}
+.enroll-btn:hover { border-color: var(--accent); color: var(--accent); }
+.enroll-btn.is-enrolled { color: var(--muted); }
+
+.progress-weeks { margin-top: 0.6rem; }
+
+.self-progress { margin: 0.8rem 0 1.6rem; }
+
+footer.site-footer {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 3rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
