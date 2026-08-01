@@ -127,7 +127,27 @@ topic, guest lecture, not yet recorded) instead of a dead link.
 
 ## 6. Write `<dir>/README.md`
 
-Sections, in order (see `stanford-cs231n/README.md` or `mit-6.033/README.md` for full examples):
+Frontmatter, before anything else: every course README needs `category`, `level`, and `tags` —
+the site generator (`site/build.js` / `site/lib/progress.js`) reads these directly to render the
+category grouping and level badge on each course card, and silently renders a blank badge if
+`level` is missing. Use the existing values already in use across the repo rather than inventing
+new ones:
+
+```yaml
+---
+category: Systems       # existing categories: Systems, Databases, Machine Learning,
+                         # Algorithms & Data Structures, Programming, Graphics — reuse one where
+                         # it fits; only add a new category if the course genuinely doesn't fit
+level: Intermediate      # Beginner | Intro | Intermediate | Advanced — judge against comparable
+                         # existing courses (e.g. a grad-level, research-paper-driven course like
+                         # 6.858 is Advanced; a foundational course with real prerequisites but no
+                         # specialization, like 6.033 or 15-213, is Intermediate)
+tags: [tag-one, tag-two] # a few short lowercase-hyphenated tags
+---
+```
+
+Sections after the frontmatter, in order (see `stanford-cs231n/README.md` or `mit-6.033/README.md`
+for full examples):
 
 - **Links** — course site, notes site (if any), assignments/labs URL, lecture video source with
   an explanation of *why* that particular year/playlist was chosen and where it doesn't line up with
