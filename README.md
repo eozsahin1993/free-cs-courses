@@ -30,3 +30,4 @@ Lab/assignment implementations are kept out of this repo — see each course's R
 - [UC Berkeley CS61B — Data Structures](berkeley-cs61b/README.md)
 - [Stanford CS149 — Parallel Computing](stanford-cs149/README.md)
 - [UC Berkeley CS161 — Computer Security](berkeley-cs161/README.md)
+- [Harvard CS50G — Introduction to Game Development](harvard-cs50g/README.md)
