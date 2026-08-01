@@ -7,3 +7,4 @@ Lab/assignment implementations are kept out of this repo — see each course's R
 ## Index
 
 - [MIT 6.824 — Distributed Systems](mit-6.824/README.md)
+- [CMU 15-445/645 — Intro to Database Systems](cmu-15445/README.md)
