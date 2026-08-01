@@ -7,6 +7,7 @@ Lab/assignment implementations are kept out of this repo — see each course's R
 ## Index
 
 - [MIT 6.0001 — Introduction to Computer Science and Programming in Python](mit-6.0001/README.md) (intro/prep, not grad-level — kept as a deliberate exception)
+- [Harvard CS50 — Introduction to Computer Science](harvard-cs50/README.md) (intro/prep, not grad-level — kept as a deliberate exception)
 - [MIT 6.824 — Distributed Systems](mit-6.824/README.md)
 - [MIT 6.006 — Introduction to Algorithms](mit-6.006/README.md)
 - [MIT 6.046J — Design and Analysis of Algorithms](mit-6.046/README.md)
