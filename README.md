@@ -18,3 +18,4 @@ Lab/assignment implementations are kept out of this repo — see each course's R
 - [Stanford CS229 — Machine Learning](stanford-cs229/README.md)
 - [Stanford CS224N — Natural Language Processing with Deep Learning](stanford-cs224n/README.md)
 - [Stanford CS234 — Reinforcement Learning](stanford-cs234/README.md)
+- [Princeton COS 461 — Computer Networks](princeton-cos461/README.md)
