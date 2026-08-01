@@ -1,3 +1,8 @@
+---
+category: Databases
+level: Advanced
+tags: [olap, query-optimization]
+---
 # CMU 15-721 — Advanced Database Systems
 
 ## Links

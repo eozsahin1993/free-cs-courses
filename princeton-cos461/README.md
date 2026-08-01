@@ -1,3 +1,8 @@
+---
+category: Systems
+level: Intermediate
+tags: [networking]
+---
 # Princeton COS 461 — Computer Networks
 
 ## Links

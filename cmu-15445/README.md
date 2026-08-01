@@ -1,3 +1,8 @@
+---
+category: Databases
+level: Intro
+tags: [sql, storage]
+---
 # CMU 15-445/645 — Intro to Database Systems
 
 ## Links

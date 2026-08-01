@@ -1,3 +1,8 @@
+---
+category: Machine Learning
+level: Advanced
+tags: [computer-vision, deep-learning]
+---
 # Stanford CS231n — Deep Learning for Computer Vision
 
 ## Links

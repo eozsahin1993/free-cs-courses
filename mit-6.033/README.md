@@ -1,3 +1,8 @@
+---
+category: Systems
+level: Intermediate
+tags: [system-design]
+---
 # MIT 6.033 — Computer System Engineering
 
 ## Links

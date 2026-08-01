@@ -1,3 +1,8 @@
+---
+category: Algorithms & Data Structures
+level: Intro
+tags: [data-structures]
+---
 # MIT 6.006 — Introduction to Algorithms
 
 ## Links

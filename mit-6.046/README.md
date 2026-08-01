@@ -1,3 +1,8 @@
+---
+category: Algorithms & Data Structures
+level: Intermediate
+tags: [algorithm-design]
+---
 # MIT 6.046J — Design and Analysis of Algorithms
 
 ## Links

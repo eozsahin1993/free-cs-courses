@@ -1,3 +1,8 @@
+---
+category: Machine Learning
+level: Intro
+tags: [ai, search]
+---
 # Stanford CS221 — Artificial Intelligence: Principles and Techniques
 
 ## Links

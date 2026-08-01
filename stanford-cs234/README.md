@@ -1,3 +1,8 @@
+---
+category: Machine Learning
+level: Advanced
+tags: [reinforcement-learning]
+---
 # Stanford CS234 — Reinforcement Learning
 
 ## Links

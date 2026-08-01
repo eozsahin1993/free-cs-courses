@@ -1,3 +1,8 @@
+---
+category: Systems
+level: Advanced
+tags: [distributed, go]
+---
 # MIT 6.824 — Distributed Systems
 
 ## Links

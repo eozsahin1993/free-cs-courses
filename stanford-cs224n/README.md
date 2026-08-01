@@ -1,3 +1,8 @@
+---
+category: Machine Learning
+level: Advanced
+tags: [nlp, deep-learning]
+---
 # Stanford CS224N — Natural Language Processing with Deep Learning
 
 ## Links

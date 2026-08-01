@@ -1,3 +1,8 @@
+---
+category: Machine Learning
+level: Intermediate
+tags: [ml-fundamentals]
+---
 # Stanford CS229 — Machine Learning
 
 ## Links
