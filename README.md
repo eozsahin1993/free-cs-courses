@@ -14,3 +14,4 @@ Lab/assignment implementations are kept out of this repo — see each course's R
 - [CMU 15-721 — Advanced Database Systems](cmu-15721/README.md)
 - [Stanford CS231n — Deep Learning for Computer Vision](stanford-cs231n/README.md)
 - [Stanford CS143 — Compilers](stanford-cs143/README.md)
+- [Stanford CS221 — Artificial Intelligence: Principles and Techniques](stanford-cs221/README.md)
