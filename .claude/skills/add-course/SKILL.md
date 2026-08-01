@@ -46,10 +46,18 @@ actually contains, but don't assume one link satisfies the whole gate in §2:
 
 Before scaffolding anything, confirm two things — this is a hard requirement, not a nice-to-have:
 
-1. **Video lectures exist somewhere publicly**, current offering or a past one. If no offering of
-   the course was ever recorded and posted publicly (not even an old YouTube playlist), stop and
-   tell the user instead of scaffolding a syllabus with no videos — flag it rather than silently
-   downgrading to slides-only.
+1. **Video lectures must substantially cover the syllabus, not just exist somewhere.** "A YouTube
+   playlist exists" is not the same as "most lectures have a real video." Count it: map candidate
+   videos to the syllabus by topic (per §4.2) *before* writing any files, and treat anything below
+   roughly two-thirds of lectures having a same-topic video as thin coverage, not a pass. Thin
+   coverage is a stop-and-ask case exactly like zero coverage — go back to the user with the ratio
+   (e.g. "15 of 25 lectures have a matching video, 10 don't") and let them decide whether to
+   proceed, accept a different/older offering, or drop the course, before any `README.md` or
+   `weeks/*.md` gets written. Finding this out mid-research and then noting it inside the files
+   anyway (and only mentioning it to the user after the fact) is the failure mode this rule exists
+   to prevent — a real case (MIT 6.837) got fully scaffolded at 15/25 coverage before the gap was
+   surfaced, and had to be torn down and redone. If no offering was ever recorded and posted
+   publicly at all, that's the zero-coverage case and stops the same way.
 2. **If the course has hands-on work — homeworks, labs, problem sets, projects — those must be
    real and findable**, not just a grading-percentage line in a syllabus PDF. Confirm the actual
    assignment specs/starter code are publicly reachable (a course site page, a GitHub repo, Colab
@@ -61,9 +69,11 @@ Before scaffolding anything, confirm two things — this is a hard requirement, 
    confirm that's actually the course's real format rather than assuming it because you didn't
    find the assignments page yet.
 
-If either check fails outright (no public video anywhere, or hands-on work exists per the syllabus
-but nothing about it is actually public), stop and ask the user whether to proceed anyway before
-writing any files — don't scaffold a thin syllabus and present it as done.
+If any check fails outright or comes in thin (no public video anywhere, video coverage below the
+~two-thirds bar in point 1, or hands-on work exists per the syllabus but nothing about it is
+actually public), stop and ask the user whether to proceed anyway — **before** writing any files.
+Don't scaffold a thin syllabus and present it as done, and don't let "I'll note the gaps inside the
+files" substitute for asking first.
 
 ## 3. Pick the directory name
 
@@ -82,9 +92,11 @@ Gather, in this order:
 2. **Lecture videos.** Check whether the *current* offering's videos are public. They usually
    aren't (enrolled-only via Canvas/Panopto/Box). Find the most recent public offering instead
    (a YouTube playlist, a department channel) and map its lectures to the current syllabus by
-   topic, not by number — numbering drifts between years. Where a current-syllabus lecture has no
+   topic, not by number — numbering drifts between years. Tally the match rate as you go — this
+   is the §2.1 gate check, not just week-file detail. Where a current-syllabus lecture has no
    video counterpart in the public year (new topic, guest lecture, etc.), say so explicitly in
-   that week's file rather than omitting it silently or forcing a mismatch.
+   that week's file rather than omitting it silently or forcing a mismatch — but if the tally
+   comes in thin overall, stop here and go back to the user per §2 before writing anything.
 3. **Written notes**, if the course has a notes site separate from slides (e.g.
    `cs231n.github.io`, `dlsyscourse.org`). Note where the notes site doesn't cover newer lecture
    topics — link `none` for those rather than leaving it ambiguous.
