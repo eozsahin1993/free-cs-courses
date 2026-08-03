@@ -14,6 +14,7 @@ Lab/assignment implementations are kept out of this repo — see each course's R
 - [MIT 6.006 — Introduction to Algorithms](mit-6.006/README.md)
 - [MIT 6.046J — Design and Analysis of Algorithms](mit-6.046/README.md)
 - [UC Berkeley CS61B — Data Structures](berkeley-cs61b/README.md)
+- [MIT 18.404J — Theory of Computation](mit-18.404/README.md)
 
 ### Systems
 - [MIT 6.033 — Computer System Engineering](mit-6.033/README.md)
