@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const { readMd, titleFromMarkdown, fixLinks, stripSection, parseFrontMatter } = require("./lib/markdown");
+const { readMd, titleFromMarkdown, escapeHtml, fixLinks, stripSection, parseFrontMatter } = require("./lib/markdown");
 const { extractCheckboxKeys, injectKeys } = require("./lib/checkboxes");
 const { layout } = require("./lib/layout");
 const { courseListProgress, weekListProgress } = require("./lib/progress");
@@ -53,10 +53,22 @@ function buildWeekPage({ slug, courseTitle, weeksDir, weekFiles, idx }) {
   return { wSlug, pageKey, wTitle, keys, pageHtml };
 }
 
+// The H1 is always written as "{University} {Code} — {Name}" (see
+// add-course's SKILL.md). Given the frontmatter's university/code, strip that
+// exact prefix to recover just the name for card/page display, leaving the
+// full H1 untouched as the fallback if either field is missing.
+function splitTitle(title, university, code) {
+  if (!university || !code) return { name: title, subtitle: "" };
+  const prefix = `${university} ${code} — `;
+  if (!title.startsWith(prefix)) return { name: title, subtitle: "" };
+  return { name: title.slice(prefix.length), subtitle: `${university} ${code}` };
+}
+
 function buildCourse(slug, siteData) {
   const courseDir = path.join(ROOT, slug);
   const { data: meta, content: readmeMd } = parseFrontMatter(readMd(path.join(courseDir, "README.md")));
   const title = titleFromMarkdown(readmeMd);
+  const { name, subtitle } = splitTitle(title, meta.university, meta.code);
 
   const weeksDir = path.join(courseDir, "weeks");
   const weekFiles = fs.existsSync(weeksDir)
@@ -73,7 +85,13 @@ function buildCourse(slug, siteData) {
 
   siteData[slug] = { weeks: weeksMeta.map((w) => w.page) };
 
-  const courseHtml = fixLinks(marked.parse(readmeMd));
+  let courseHtml = fixLinks(marked.parse(readmeMd));
+  if (subtitle) {
+    courseHtml = courseHtml.replace(
+      /<h1>[\s\S]*?<\/h1>/,
+      `<h1>${escapeHtml(name)}</h1>\n<div class="course-page-subtitle">${escapeHtml(subtitle)}</div>`
+    );
+  }
   const coursePage = layout({
     title,
     page: slug,
@@ -84,7 +102,16 @@ function buildCourse(slug, siteData) {
   ensureDir(path.join(OUT, slug));
   fs.writeFileSync(path.join(OUT, slug, "index.html"), coursePage);
 
-  return { slug, title, weeksMeta, category: meta.category || "Other", level: meta.level || "", tags: meta.tags || [] };
+  return {
+    slug,
+    title,
+    name,
+    subtitle,
+    weeksMeta,
+    category: meta.category || "Other",
+    level: meta.level || "",
+    tags: meta.tags || [],
+  };
 }
 
 function copyAssets() {

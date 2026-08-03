@@ -1,4 +1,6 @@
 ---
+university: UC Berkeley
+code: CS61B
 category: Algorithms & Data Structures
 level: Intro
 tags: [java, data-structures]

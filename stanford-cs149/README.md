@@ -1,4 +1,6 @@
 ---
+university: Stanford
+code: CS149
 category: Systems
 level: Advanced
 tags: [parallel-computing, gpu, cuda]

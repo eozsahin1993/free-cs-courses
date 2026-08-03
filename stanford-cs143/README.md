@@ -1,4 +1,6 @@
 ---
+university: Stanford
+code: CS143
 category: Systems
 level: Intermediate
 tags: [compilers]

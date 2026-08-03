@@ -1,4 +1,6 @@
 ---
+university: MIT
+code: 6.875/6.5620
 category: Security
 level: Advanced
 tags: [cryptography, zero-knowledge, complexity-theory, theory]

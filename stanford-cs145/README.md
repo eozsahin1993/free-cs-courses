@@ -1,4 +1,6 @@
 ---
+university: Stanford
+code: CS145
 category: Databases
 level: Intro
 tags: [sql, application-development]

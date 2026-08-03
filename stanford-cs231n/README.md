@@ -1,4 +1,6 @@
 ---
+university: Stanford
+code: CS231n
 category: Machine Learning
 level: Advanced
 tags: [computer-vision, deep-learning]

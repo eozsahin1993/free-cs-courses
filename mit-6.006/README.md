@@ -1,4 +1,6 @@
 ---
+university: MIT
+code: 6.006
 category: Algorithms & Data Structures
 level: Intro
 tags: [data-structures]

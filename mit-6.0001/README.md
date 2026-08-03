@@ -1,4 +1,6 @@
 ---
+university: MIT
+code: 6.0001
 category: Programming
 level: Beginner
 tags: [python, intro-programming]

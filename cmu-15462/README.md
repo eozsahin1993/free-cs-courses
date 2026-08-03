@@ -1,4 +1,6 @@
 ---
+university: CMU
+code: 15-462/662
 category: Graphics
 level: Intermediate
 tags: [computer-graphics, rendering]

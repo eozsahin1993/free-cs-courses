@@ -127,14 +127,22 @@ topic, guest lecture, not yet recorded) instead of a dead link.
 
 ## 6. Write `<dir>/README.md`
 
-Frontmatter, before anything else: every course README needs `category`, `level`, and `tags` —
-the site generator (`site/build.js` / `site/lib/progress.js`) reads these directly to render the
-category grouping and level badge on each course card, and silently renders a blank badge if
-`level` is missing. Use the existing values already in use across the repo rather than inventing
-new ones:
+Frontmatter, before anything else: every course README needs `university`, `code`, `category`,
+`level`, and `tags` — the site generator (`site/build.js` / `site/lib/progress.js`) reads these
+directly to render the category grouping and level badge on each course card, and silently renders
+a blank badge if `level` is missing. `university`/`code` must exactly match the H1's
+`"{University} {Code} — {Name}"` prefix (see below) — the generator strips that literal prefix to
+show the course name as the card's main title with "University Code" as a small subtitle
+underneath; if the strings don't match exactly, it silently falls back to showing the whole H1 as
+the title with no subtitle. Use the existing values already in use across the repo rather than
+inventing new ones:
 
 ```yaml
 ---
+university: MIT          # exactly as it appears before the code in the H1 below — e.g. MIT, CMU,
+                          # Stanford, UC Berkeley, Harvard, Princeton
+code: 6.824               # exactly as it appears after university in the H1 below — e.g. 6.824,
+                          # 15-445/645, CS231n, COS 461
 category: Systems       # existing categories: Systems, Databases, Machine Learning,
                          # Algorithms & Data Structures, Programming, Graphics — reuse one where
                          # it fits; only add a new category if the course genuinely doesn't fit
@@ -145,6 +153,10 @@ level: Intermediate      # Beginner | Intro | Intermediate | Advanced — judge 
 tags: [tag-one, tag-two] # a few short lowercase-hyphenated tags
 ---
 ```
+
+The README's H1 itself is unchanged: still `# {University} {Code} — {Name}` (e.g.
+`# MIT 6.824 — Distributed Systems`) — the frontmatter fields above are only there so the site
+generator can split it visually, they don't replace or duplicate the H1's own wording.
 
 Sections after the frontmatter, in order (see `stanford-cs231n/README.md` or `mit-6.033/README.md`
 for full examples):

@@ -1,4 +1,6 @@
 ---
+university: CMU
+code: 11-785
 category: Machine Learning
 level: Advanced
 tags: [deep-learning, neural-networks, pytorch]

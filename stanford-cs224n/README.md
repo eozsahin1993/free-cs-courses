@@ -1,4 +1,6 @@
 ---
+university: Stanford
+code: CS224N
 category: Machine Learning
 level: Advanced
 tags: [nlp, deep-learning]

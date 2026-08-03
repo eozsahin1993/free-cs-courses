@@ -1,4 +1,6 @@
 ---
+university: CMU
+code: 15-445/645
 category: Databases
 level: Intro
 tags: [sql, storage]

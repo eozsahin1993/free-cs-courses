@@ -1,4 +1,6 @@
 ---
+university: CMU
+code: 15-721
 category: Databases
 level: Advanced
 tags: [olap, query-optimization]

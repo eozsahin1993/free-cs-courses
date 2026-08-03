@@ -1,4 +1,6 @@
 ---
+university: Harvard
+code: CS50G
 category: Game Development
 level: Intro
 tags: [game-dev, unity, lua]

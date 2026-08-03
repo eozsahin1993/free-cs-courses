@@ -1,4 +1,6 @@
 ---
+university: Stanford
+code: CS336
 category: Machine Learning
 level: Advanced
 tags: [llm, systems]

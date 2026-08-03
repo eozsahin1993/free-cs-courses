@@ -122,8 +122,26 @@ input[type="checkbox"] {
 }
 .course-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-2px); border-color: var(--accent); }
 .card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 0.5rem; }
+.course-title-block { display: flex; flex-direction: column; gap: 0.2rem; min-width: 0; }
 .course-title { font-weight: 600; color: var(--fg); text-decoration: none; line-height: 1.35; }
 .course-title:hover { color: var(--accent); }
+.course-subtitle {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+/* --- course page header (university/code under the H1 title) --- */
+.course-page-subtitle {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  margin: -0.1rem 0 1.2rem;
+}
 
 .tags { display: flex; flex-wrap: wrap; gap: 0.3rem; }
 .tag {

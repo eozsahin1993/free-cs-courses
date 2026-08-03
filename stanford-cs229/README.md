@@ -1,4 +1,6 @@
 ---
+university: Stanford
+code: CS229
 category: Machine Learning
 level: Intermediate
 tags: [ml-fundamentals]

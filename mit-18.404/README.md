@@ -1,4 +1,6 @@
 ---
+university: MIT
+code: 18.404J
 category: Algorithms & Data Structures
 level: Intermediate
 tags: [theory-of-computation, computability, complexity-theory, automata]

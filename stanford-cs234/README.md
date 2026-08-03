@@ -1,4 +1,6 @@
 ---
+university: Stanford
+code: CS234
 category: Machine Learning
 level: Advanced
 tags: [reinforcement-learning]

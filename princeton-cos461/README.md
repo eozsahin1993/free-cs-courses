@@ -1,4 +1,6 @@
 ---
+university: Princeton
+code: COS 461
 category: Systems
 level: Intermediate
 tags: [networking]

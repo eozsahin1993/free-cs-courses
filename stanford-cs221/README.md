@@ -1,4 +1,6 @@
 ---
+university: Stanford
+code: CS221
 category: Machine Learning
 level: Intro
 tags: [ai, search]

@@ -26,7 +26,10 @@ function levelBadge(level) {
 function courseCard(course) {
   return `  <div class="course-card">
     <div class="card-top">
-      <a class="course-title" href="${course.slug}/index.html">${escapeHtml(course.title)}</a>
+      <div class="course-title-block">
+        <a class="course-title" href="${course.slug}/index.html">${escapeHtml(course.name || course.title)}</a>
+        ${course.subtitle ? `<div class="course-subtitle">${escapeHtml(course.subtitle)}</div>` : ""}
+      </div>
       ${levelBadge(course.level)}
     </div>
     ${tagList(course.tags)}

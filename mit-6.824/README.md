@@ -1,4 +1,6 @@
 ---
+university: MIT
+code: 6.824
 category: Systems
 level: Advanced
 tags: [distributed, go]

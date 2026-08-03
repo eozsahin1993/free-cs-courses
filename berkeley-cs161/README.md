@@ -1,4 +1,6 @@
 ---
+university: Berkeley
+code: CS161
 category: Systems
 level: Intermediate
 tags: [security, cryptography, web-security, networking]

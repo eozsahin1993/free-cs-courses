@@ -1,4 +1,6 @@
 ---
+university: MIT
+code: 6.046J
 category: Algorithms & Data Structures
 level: Intermediate
 tags: [algorithm-design]

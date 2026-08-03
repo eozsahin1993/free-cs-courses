@@ -1,4 +1,6 @@
 ---
+university: Harvard
+code: CS50
 category: Programming
 level: Beginner
 tags: [c, python, sql, web, intro-programming]
