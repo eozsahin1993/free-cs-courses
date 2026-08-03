@@ -144,8 +144,13 @@ university: MIT          # exactly as it appears before the code in the H1 below
 code: 6.824               # exactly as it appears after university in the H1 below — e.g. 6.824,
                           # 15-445/645, CS231n, COS 461
 category: Systems       # existing categories: Systems, Databases, Machine Learning,
-                         # Algorithms & Data Structures, Programming, Graphics — reuse one where
-                         # it fits; only add a new category if the course genuinely doesn't fit
+                         # Algorithms & Data Structures, Mathematics, Programming, Graphics — reuse
+                         # one where it fits; only add a new category if the course genuinely
+                         # doesn't fit. Mathematics is for courses that are fundamentally math
+                         # (discrete math, linear algebra, etc.), even when CS-flavored — e.g.
+                         # 6.042 (Mathematics for Computer Science) is Mathematics, not Algorithms &
+                         # Data Structures, since it teaches proof/counting/probability technique
+                         # rather than algorithm design
 level: Intermediate      # Beginner | Intro | Intermediate | Advanced — judge against comparable
                          # existing courses (e.g. a grad-level, research-paper-driven course like
                          # 6.858 is Advanced; a foundational course with real prerequisites but no
