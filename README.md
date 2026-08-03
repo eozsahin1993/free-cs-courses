@@ -31,6 +31,7 @@ Lab/assignment implementations are kept out of this repo — see each course's R
 ### Security
 - [MIT 6.858 — Computer Systems Security](mit-6.858/README.md)
 - [UC Berkeley CS161 — Computer Security](berkeley-cs161/README.md)
+- [MIT 6.875/6.5620 — Foundations of Cryptography](mit-6.875/README.md)
 
 ### Computer Networks
 - [Princeton COS 461 — Computer Networks](princeton-cos461/README.md)
