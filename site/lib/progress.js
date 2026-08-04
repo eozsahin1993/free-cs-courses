@@ -63,15 +63,27 @@ function weekRow(week) {
     </div>`;
 }
 
+// A pinned section at the top of the home page for enrolled courses. Starts
+// empty and hidden — app.js moves each enrolled course's existing card node
+// into it client-side (enrollment lives in localStorage, so the static build
+// has no idea who's enrolled in what).
+function continueLearningSection() {
+  return `<section class="course-section is-hidden" data-continue-learning-section>
+<h2>Continue Learning</h2>
+<div class="course-grid" data-continue-learning-grid></div>
+</section>`;
+}
+
 // Home page: one card grid per category, replacing the plain README index
 // list (see stripSection() in markdown.js) so the course list only appears once.
 function courseListProgress(courses) {
-  return groupByCategory(courses)
+  const groups = groupByCategory(courses)
     .map(([category, group]) => {
       const cards = group.map(courseCard).join("\n");
       return `<section class="course-section">\n<h2>${escapeHtml(category)}</h2>\n<div class="course-grid">\n${cards}\n</div>\n</section>`;
     })
     .join("\n");
+  return continueLearningSection() + "\n" + groups;
 }
 
 // Course page: a single enroll toggle gating the whole per-week list.

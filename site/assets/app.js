@@ -76,6 +76,34 @@
     });
   }
 
+  // --- Home page: pin enrolled courses into a "Continue Learning" section up
+  // top. Moves each card's actual DOM node (not a clone) so its already-wired
+  // enroll button and progress bar keep working; un-enrolling moves it back
+  // to its original category grid.
+  var clSection = document.querySelector("[data-continue-learning-section]");
+  var clGrid = clSection && clSection.querySelector("[data-continue-learning-grid]");
+  var homeCards = [];
+  if (clSection) {
+    document.querySelectorAll(".course-grid:not([data-continue-learning-grid]) .course-card").forEach(function (card) {
+      var enrollBtn = card.querySelector("[data-enroll]");
+      if (enrollBtn) homeCards.push({ slug: enrollBtn.getAttribute("data-enroll"), card: card, home: card.parentNode });
+    });
+  }
+  function refreshContinueLearning() {
+    if (!clSection) return;
+    var any = false;
+    homeCards.forEach(function (entry) {
+      if (isEnrolled(entry.slug)) {
+        clGrid.appendChild(entry.card);
+        any = true;
+      } else {
+        entry.home.appendChild(entry.card);
+      }
+    });
+    clSection.classList.toggle("is-hidden", !any);
+  }
+  refreshContinueLearning();
+
   // --- Enrollment toggles: gate whether progress is shown at all ---
   document.querySelectorAll("[data-enroll]").forEach(function (btn) {
     var slug = btn.getAttribute("data-enroll");
@@ -94,6 +122,7 @@
     btn.addEventListener("click", function () {
       setEnrolled(slug, !isEnrolled(slug));
       refresh();
+      refreshContinueLearning();
     });
 
     refresh();
