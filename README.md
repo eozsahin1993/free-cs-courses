@@ -25,6 +25,7 @@ Lab/assignment implementations are kept out of this repo — see each course's R
 - [MIT 6.1810 — Operating System Engineering](mit-6.1810/README.md)
 - [MIT 6.824 — Distributed Systems](mit-6.824/README.md)
 - [CMU 15-213 — Introduction to Computer Systems](cmu-15213/README.md)
+- [CMU 18-447 — Introduction to Computer Architecture](cmu-18447/README.md)
 - [Stanford CS149 — Parallel Computing](stanford-cs149/README.md)
 
 ### Databases
